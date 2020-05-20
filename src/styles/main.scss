@@ -1,0 +1,89 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+
+body {
+  background: rgb(37, 163, 37);
+  margin: 0;
+}
+
+.score {
+  position: absolute;
+  top: -42px;
+  display: block;
+  width: 960px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  font-size: 40px;
+}
+
+.field {
+  margin: 50px auto;
+  display: block;
+  box-sizing: content-box;
+}
+
+.cell {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%);
+  z-index: -2;
+}
+
+.even {
+  background-color: rgb(111, 219, 2);
+}
+
+.odd {
+  background-color: rgb(141, 230, 52);
+}
+
+.game-over {
+  position: absolute;
+  width: 350px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 150px;
+  height: 200px;
+  background-color: rgb(107, 187, 28);
+  border-radius: 30px;
+  display: none;
+  &__score {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+
+    &-how-lose {
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  &__button {
+    margin: 20px auto 0;
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    text-align: center;
+    color: rgb(216, 216, 216);
+    border-radius: 20px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: rgb(93, 161, 25);
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+}
